@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('GetData', function($http, $q){
+app.factory('getData', function($http, $q){
 
   let getNashData = ()=> {
     return $q((resolve, reject)=> {
