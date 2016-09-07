@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h1>List Partial</h1>
+    <br/>
+    <div ng-repeat="resource in resources">
+      <h2>{{resource.contact}}</h2>
+      <h5><b>CONTACT TYPE:</b> {{resource.contact_type}}</h5>
+      <h5><b>PHONE:</b> {{resource.phone_number}}</h5>
+      <h5 ng-show="resource.notes"><b>NOTES:</b> <p><i>"{{resource.notes}}"</i></p></h5>
+      <hr/>
+    </div>
+  </div>
+</div>

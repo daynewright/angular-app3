@@ -1,8 +1,8 @@
 'use strict';
 
-app.controller('MainCtrl', function($scope, GetData){
+app.controller('MainCtrl', function($scope, getData){
 
-  let data = GetData()
+  let data = getData()
     .then((response)=> {
       let contactTypeObj = {};
 
@@ -32,19 +32,19 @@ app.controller('MainCtrl', function($scope, GetData){
         ]
     };
     $scope.chartObject.data.rows.push(chartDatum);
-}
+  }
 
-$scope.chartObject = {
-    type: "BarChart",
-    data: {
-        "cols": [
-            { id: "t", label: "Type of Service", type: "string" },
-            { id: "s", label: "Number of Providers", type: "number" }
-        ], "rows": [] //You'll be adding the rows with addChartRow
-    },
-    options: {
-        title: "Nashville Services"
-    }
-};
+  $scope.chartObject = {
+      type: "BarChart",
+      data: {
+          "cols": [
+              { id: "t", label: "Type of Service", type: "string" },
+              { id: "s", label: "Number of Providers", type: "number" }
+          ], "rows": [] //You'll be adding the rows with addChartRow
+      },
+      options: {
+          title: "Nashville Services"
+      }
+  };
 
 });
